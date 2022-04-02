@@ -1,8 +1,18 @@
 package com.firstlesson.justtry.Model;
-import javax.persistence.Entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Produto {
 
+    // for debug dependencies if they are not found do an mvn clean install on justtry folder 
+
+    //for run the project do an mvn spring boot:run 
+    @Id //vai transformar essa coluna em primary key
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
     private String nome;

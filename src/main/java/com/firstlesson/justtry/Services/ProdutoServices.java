@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.firstlesson.justtry.Model.Produto;
-import com.firstlesson.justtry.Repository.ProdutoRepository;
+import com.firstlesson.justtry.Repository.ProdutoRepositoryOLD;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class ProdutoServices {
     
     @Autowired
-    private ProdutoRepository produtoRepository;
+    private ProdutoRepositoryOLD produtoRepository;
 
     public List<Produto>ObterTodos() {
         return produtoRepository.obterTodos();
