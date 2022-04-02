@@ -1,4 +1,5 @@
 package com.firstlesson.justtry.Model;
+import javax.persistence.Entity;
 
 public class Produto {
 
