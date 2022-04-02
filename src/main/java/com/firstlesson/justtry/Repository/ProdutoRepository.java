@@ -7,6 +7,9 @@ import java.util.Optional;
 
 import com.firstlesson.justtry.Model.Produto;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class ProdutoRepository {
     
     private List<Produto> produtos = new ArrayList<Produto>();
