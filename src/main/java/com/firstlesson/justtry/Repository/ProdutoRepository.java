@@ -1,6 +1,7 @@
 package com.firstlesson.justtry.Repository;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +30,26 @@ public class ProdutoRepository {
     produtos.add(produto);
 
     return produto;
+    }
+
+    public void deletar(Integer id){
+        produtos.removeIf(produto->produto.getId()==id);
+
+    }
+
+    public Produto atualizar(Produto produto){
+        Optional<Produto> produtoEncontrado = obterPorId(produto.getId());
+
+        if(produtoEncontrado.isEmpty()){
+            throw new InputMismatchException("produto nao encontrado");
+        }
+
+        deletar(produto.getId());
+
+        produtos.add(produto);
+
+        return produto;
+
     }
 
 
